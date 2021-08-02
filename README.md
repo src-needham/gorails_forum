@@ -1,24 +1,26 @@
-# README
+# Database Structure
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. User - Devise
 
-Things you may want to cover:
+* email:string
+* password:string
 
-* Ruby version
+has_many :forum_threads
+has_many :forum_posts
 
-* System dependencies
+2. ForumThread
 
-* Configuration
+* user_id:integer
+* subject:string
 
-* Database creation
+belongs_to :user
+has_many :forum_posts
 
-* Database initialization
+3. ForumPost
 
-* How to run the test suite
+* forum_thread_id:integer
+* user_id:integer
+* body:text
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+belongs_to :forum_thread
+belongs_to :user
