@@ -222,6 +222,8 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rdoc (6.3.2)
+    record_tag_helper (1.0.1)
+      actionview (>= 5)
     regexp_parser (2.1.1)
     responders (3.0.1)
       actionpack (>= 5.0)
@@ -316,6 +318,7 @@ DEPENDENCIES
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4)
   ransack
+  record_tag_helper
   sanitize
   sass-rails (>= 6)
   sdoc
