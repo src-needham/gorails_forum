@@ -3,7 +3,7 @@ class ForumThreadsController < ApplicationController
   before_action :set_forum_thread, except: [:index, :new, :create]
 
   def index
-    @q = ForumThread.search(params[:q])
+    @q = ForumThread.ransack(params[:q])
     @forum_threads = @q.result(distinct: true)
   end
 
