@@ -1,4 +1,4 @@
-class NotificationMailer << ActionMailer::Base
+class NotificationMailer < ActionMailer::Base
   default from: "notifications@gorails.com"
 
   def forum_post_notification(user, forum_post)
