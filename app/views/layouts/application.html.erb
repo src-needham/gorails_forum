@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GorailsForum</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Forum</title>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <%= render "shared/navbar" %>
+
+    <div class="container">
+      <%= flash.notice %>
+      <%= flash.alert %>
+      <%= yield %>
+    </div>
   </body>
 </html>
